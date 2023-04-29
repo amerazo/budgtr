@@ -1,7 +1,7 @@
 //Dependencies
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = 3000
 const budget = require('./models/budget.js');
 
 
@@ -25,6 +25,6 @@ app.get('/new', (req, res) => {
 
 
 //Port 
-app.listen(PORT, () => {
-    console.log('Server is listening to PORT 3000 ${PORT}')
-});
+app.listen(3000, () => {
+    console.log('Server listening on PORT 3000')
+})
