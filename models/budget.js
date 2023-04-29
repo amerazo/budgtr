@@ -1,4 +1,4 @@
-module.exports = [
+const budget = [
     {
       date: "April 1",
       name: "Income",
@@ -70,3 +70,6 @@ module.exports = [
       tags: ["pets"]
     },
   ];
+
+//add to ensure it displays
+  module.exports = budget;
