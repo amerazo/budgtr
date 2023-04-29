@@ -15,6 +15,14 @@ app.get('/', (req, res) => {
     res.render('index.ejs', {budget})
 });
 
+//New Route
+app.get('/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+//
+
+
 
 //Port 
 app.listen(PORT, () => {
