@@ -9,6 +9,10 @@ const budget = require('./models/budget.js');
 app.set('view engine', 'ejs');
 app.use(express.json());
 
+//Static
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended:false }));
+
 
 //Index.EJS Route
 app.get('/', (req, res) => {
@@ -19,9 +23,6 @@ app.get('/', (req, res) => {
 app.get('/new', (req, res) => {
     res.render('new.ejs')
 })
-
-//
-
 
 
 //Port 
