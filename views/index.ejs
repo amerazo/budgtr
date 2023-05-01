@@ -1,37 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Budgtr ALL</title>
-    <!-- Import StyleSheets-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-</head>
-<% console.log(Budget) %>
-<body>
-    <div class="container">
-        <h1>Budgtr ALL</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>date</th>
-                    <th>name</th>
-                    <th>from</th>
-                    <th>amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for(let i=0; i<Budget.length; i++) { %>
-                    <tr>
-                        <td><%= Budget[i].date %></td>
-                        <td><a href="/budgets/<%= i %>"><%= Budget[i].name %></a></td>
-                        <td><%= Budget[i].from %></td>
-                        <td><%= Budget[i].amount %></td>
-                    </tr>
-                <% } %>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html> 
-
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Budgtr ALL</title>
+     <!-- Import StyleSheets-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+     <style>
+         body {
+             background-color: #ffcccb;
+         }
+         h1 {
+             color: black;
+         }
+         th, td {
+             border: 1px solid blue;
+             padding: 5px;
+             color: black;
+         }
+         th {
+             background-color: red;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <h1>Budgtr ALL</h1>
+         <table>
+             <thead>
+                 <tr>
+                     <th>date</th>
+                     <th>name</th>
+                     <th>from</th>
+                     <th>amount</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <% for(let i=0; i<Budget.length; i++) { %>
+                     <tr>
+                         <td><%= Budget[i].date %></td>
+                         <td><a href="/budgets/<%= i %>"><%= Budget[i].name %></a></td>
+                         <td><%= Budget[i].from %></td>
+                         <td><%= Budget[i].amount %></td>
+                     </tr>
+                 <% } %>
+             </tbody>
+         </table>
+     </div>
+ </body>
+ </html>
+ 
