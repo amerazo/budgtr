@@ -1,4 +1,6 @@
-const budget = [
+//declaring Budget as a variable
+//Budget data in form of an array of objects
+const Budget = [
     {
       date: "April 1",
       name: "Income",
@@ -72,4 +74,4 @@ const budget = [
   ];
 
 //add to ensure it displays
-  module.exports = budget;
+  module.exports = Budget;

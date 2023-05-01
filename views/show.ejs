@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- //Import CSS// -->
+    <meta charset="UTF-8">
+    <title>Show</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1><%= budgetItem.name %></h1>
+        <button onclick="window.location.href='/budgets'">BACK</button>
+        <table>
+          <tbody>
+            <tr>
+              <td>date:</td>
+              <td><%= budgetItem.date %></td>
+            </tr>
+            <tr>
+              <td>name:</td>
+              <td><%= budgetItem.name %></td>
+            </tr>
+            <tr>
+              <td>from:</td>
+              <td><%= budgetItem.from %></td>
+            </tr>
+            <tr>
+              <td>amount:</td>
+              <td><%= budgetItem.amount %></td>
+            </tr>
+            <tr>
+              <td>tags:</td>
+              <td><%= budgetItem.tags.join(", ") %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
 </body>
-</html>
+</html> 
+
